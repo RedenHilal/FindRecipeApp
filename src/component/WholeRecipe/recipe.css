@@ -1,0 +1,114 @@
+/* RecipePage.css */
+
+.RecipePage {
+    background: linear-gradient(to bottom, rgb(153, 171, 185), rgb(157, 161, 164));
+  padding: 2rem;
+  box-shadow: 0 6px 12px 2px rgba(193, 206, 177, 0.6);
+  border-radius: 9px;
+  margin-bottom: 20px;
+  width: 70%;
+  height: auto;
+  }
+
+  
+  .firstSec {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  
+  .firstSec img {
+    align-self: center;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .firstSec h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .firstSec p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  .DietLabelC {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  
+  
+  .tag-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tag {
+    background-color: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #444;
+    cursor: pointer;
+    height: 17px;
+  }
+  
+  .tagDescription {
+    width: max-content;
+    max-width: 200px;
+    border-radius: 5px;
+    background-color: rgb(176, 196, 214);
+    box-shadow: 0 2px 4px 1px rgb(234, 238, 242);
+    padding: 0.5rem;
+    margin-top: 5px;
+    z-index: 1000;
+    height: auto;
+    position: absolute;
+    display: none;
+  }
+  .tag:hover{
+    background-color:#cac8c8 ;
+  }
+  .tag:hover + .tagDescription{
+    display: block;
+    opacity: 0.7;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    list-style-type: disc;
+  }
+  @media (min-width: 768px) {
+    .firstSec {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .firstSec img {
+      width: 300px;
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+  
+    .firstSec h2 {
+      font-size: 2.5rem;
+    }
+  
+    .firstSec p {
+      font-size: 1.2rem;
+    }
+  }

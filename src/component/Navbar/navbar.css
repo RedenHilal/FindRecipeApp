@@ -1,0 +1,97 @@
+.Navbar {
+/* Container Styles Navbar*/
+div {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 2px 4px 1px rgb(168, 185, 197);
+    border-radius: 0.5rem;
+  }
+  
+  /* Navigation Styles */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #53575d;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav input[type="text"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: #f9f9ee;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  nav input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  nav button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    background-color: #3f3c3f;
+    color: #b3cae2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-left: 3px;
+  }
+  
+  nav button:hover {
+    background-color: #48174b;
+  }
+  
+  /* List Styles */
+  ul {
+    max-width: 800px;
+    
+    padding: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    right: 0;
+    background-color: #f5f5f5;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 300px; /* Set a fixed maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 1rem; /* Add some padding to the list container */
+  }
+  
+  
+  li {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    list-style: none;
+  }
+  
+  li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .hidden {
+    display: none;
+  }
+  .navLink{
+    text-decoration: none;
+    color: #3f3c3f;
+  }
+}
