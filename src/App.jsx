@@ -25,16 +25,18 @@ function App() {
   const [totalPage, setTotalPage] = useState(1)
   const [dataPage,setDataPage] = useState({start:0,end:19})
 
+  const apikey = import.meta.env.VITE_API_KEY;
+
   useEffect(()=>{
     if(data){clearTimeout(timer)
     const time = setTimeout(()=>{
       fetchRecipe(regex)
-    },750)
+    },550)
     updateTimer(time)}
   },[regex])
 
     async function fetchRecipe(){
-        const response = await axios.get(`https://api.edamam.com/api/recipes/v2?type=public&app_id=60a2809f&app_key=88ca5cfd40b30b1f2cde8b66642df71d${regex? `&q=${regex}`:(Filter?'':'&q=edamame')}${Filter? `&${Filter}`:''}`);
+        const response = await axios.get(`https://api.edamam.com/api/recipes/v2?type=public&app_id=60a2809f&app_key=${apikey}${regex? `&q=${regex}`:(Filter?'':'&q=edamame')}${Filter? `&${Filter}`:''}`);
         setData(response.data)
         return response.data
       }
